@@ -391,6 +391,7 @@ margin-block-start: 9px;
   border: 2px solid var(--accent-color);
   padding: 30px;
   background-color: var(--bg-color);
+  overflow: hidden;
 }
 
 .dialog::backdrop {
@@ -406,6 +407,7 @@ margin-block-start: 9px;
   align-items: center;
  gap: 20px;
  margin-block-end: 20px;
+ 
 }
 
 .dialog[open] .floppy-icon {
