@@ -82,8 +82,8 @@
   background-color: transparent;
   transition: opacity 0.3s ease;
   cursor: pointer;
-  top: 0;
-  left: 0;
+  /*top: 0;
+  left: 0;*/
 }
 
 /*.theme-menu__item:not(:first-child) {
@@ -136,7 +136,7 @@ margin-block-start: 9px;
   margin-inline: auto;
   inline-size: var(--block-inline-size);
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   row-gap: 52px;
   column-gap: 0;
@@ -201,9 +201,9 @@ margin-block-start: 9px;
   text-transform: lowercase;
 }
 
-@supports (text-stroke: 1px var(--text-stroke-color)) {
+@supports (text-stroke: 1px var(--text-stroke-color)) or (-webkit-text-stroke: 1px var(--text-stroke-color)) {
   .card-article__image__watermark {
-    text-shadow: unset;
+    text-shadow: none;
     text-stroke: 1px var(--text-stroke-color);
     -webkit-text-stroke: 1px var(--text-stroke-color);
   }
@@ -230,7 +230,7 @@ margin-block-start: 9px;
   margin-block-end: 29px;
 }
 
-.button-like-position {
+.button {
   position: relative;
   font-size: 14px;
   line-height: 14px;
@@ -241,7 +241,7 @@ margin-block-start: 9px;
   cursor: pointer;
 }
 
-.button-like-position::before {
+.button::before {
   content: "";
   position: absolute;
   top: 0;
@@ -256,16 +256,16 @@ margin-block-start: 9px;
   transform-origin: left;
 }
 
-.button-like-position:hover::before {
+.button:hover::before {
   transform: scaleX(1);
-  transform-origin: left;
+ 
 }
 
-.button-like-position:focus {
+.button:focus {
   outline: none;
 }
 
-.button-like-position:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
 }
 
@@ -305,6 +305,7 @@ margin-block-start: 9px;
   position: relative;
   z-index: 2;
   font-size: 14px;
+  line-height: 12.6px;
   color: var(--bt-color);
   font-family: var(--font-accent);
   mix-blend-mode: difference;
@@ -312,8 +313,11 @@ margin-block-start: 9px;
 
 /* styles for button's  */
 
-.contour {
-  transition: fill 0.1s linear;
+
+
+.like-icon{
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 /* image filter's */

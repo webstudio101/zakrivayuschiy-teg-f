@@ -27,11 +27,11 @@
 /* header menu animation */   
 
 @keyframes triangle-movie {
-  0% {
-   translate:0;
-  }
+  /*0% {
+   translate: 0px;
+  }*/
   100% {
-    translate: 4px;
+    transform: translate(4px);
   }
 }
 
@@ -40,29 +40,29 @@
 
 /* hover to heart icon */
 
-.heart .core {	
+.like-icon .core {	
 	transition-property: fill;
   transition-timing-function: linear;
   transition-duration: 300ms;
-  transition-delay: 300ms;
+  transition-delay: 30ms;
 }
 
 
-.heart .main-body {
+.like-icon .main-body {
   transition-property: fill;
   transition-timing-function: linear;
   transition-duration: 300ms;
-  transition-delay: 0;
+  /*transition-delay: 0;*/
 }
 
 
-.heart:hover .core {
+.like-icon:hover .core {
   fill: var(--cr-color);
-  transition-delay: 0;
+ /* transition-delay: 0px;*/
 }
 
 
-.heart:hover .main-body {
+.like-icon:hover .main-body {
   fill: var(--cr-color);
   transition-delay: 50ms;
 }
@@ -70,6 +70,10 @@
 
 
 /* click to heart icon */
+
+.contour {
+  transition: fill 0.1s linear;
+}
 
 .like-icon .contour {
   transition-property: fill;
@@ -79,18 +83,22 @@
 
 .like-icon:active .core {
   fill: var(--general-fill);
+  transition-delay: 0ms;
 }
 
 .like-icon:active .main-body {
   fill: var(--general-fill);
+  transition-delay: 50ms;
 }
 
 .like-icon.is-liked .core {
   fill: var(--general-fill);
+  transition-delay: 50ms;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--general-fill);
+  transition-delay: 300ms;
 }
 
 .like-icon.is-liked .contour {
@@ -105,6 +113,7 @@
   transform-origin: center;
   animation: heart 300ms ease-in alternate;
   animation-delay: 100ms;
+  animation-iteration-count: 1;
 }
 
 
@@ -123,6 +132,7 @@
 .like-icon.is-liked .sparks {
   animation: sparks 300ms ease-in alternate;
   animation-delay: 300ms;
+  animation-iteration-count: 1;
 }
 
 @keyframes sparks {
