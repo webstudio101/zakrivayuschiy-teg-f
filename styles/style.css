@@ -435,11 +435,6 @@ margin-block-start: 9px;
   .main {
     min-inline-size: 100%;
   }
-  :root {
-    --block-inline-size: minmax(2.5rem, 3.125rem);
-    --article-block-size: 718px;
-    --header-min-block-size: 327px;
-  }
 
   .header {
     padding-block-start: 120px;

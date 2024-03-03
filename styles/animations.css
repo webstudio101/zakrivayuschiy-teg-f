@@ -22,9 +22,7 @@
   transition-timing-function: step-end; 
    */
 
-
-
-/* header menu animation */   
+/* header menu animation */
 
 @keyframes triangle-movie {
   /*0% {
@@ -35,18 +33,14 @@
   }
 }
 
-
-
-
 /* hover to heart icon */
 
-.like-icon .core {	
-	transition-property: fill;
+.like-icon .core {
+  transition-property: fill;
   transition-timing-function: linear;
   transition-duration: 300ms;
   transition-delay: 30ms;
 }
-
 
 .like-icon .main-body {
   transition-property: fill;
@@ -55,22 +49,17 @@
   /*transition-delay: 0;*/
 }
 
-
 .like-icon:hover .core {
   fill: var(--cr-color);
- /* transition-delay: 0px;*/
+  /* transition-delay: 0px;*/
 }
-
 
 .like-icon:hover .main-body {
   fill: var(--cr-color);
   transition-delay: 50ms;
 }
 
-
-
 /* click to heart icon */
-
 
 .like-icon .contour {
   transition-property: fill;
@@ -114,18 +103,15 @@
   animation-iteration-count: 1;
 }
 
-
-@keyframes heart  {
+@keyframes heart {
   from {
     transform: scale(1);
   }
-  
+
   to {
     transform: scale(1.5);
   }
 }
-
-
 
 .like-icon.is-liked .sparks {
   animation: sparks 300ms ease-in alternate;
@@ -141,7 +127,3 @@
     fill: var(--general-fill);
   }
 }
-
-
-
-
