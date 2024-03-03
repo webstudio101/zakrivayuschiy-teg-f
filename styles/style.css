@@ -201,7 +201,8 @@ margin-block-start: 9px;
   text-transform: lowercase;
 }
 
-@supports (text-stroke: 1px var(--text-stroke-color)) or (-webkit-text-stroke: 1px var(--text-stroke-color)) {
+@supports (text-stroke: 1px var(--text-stroke-color)) or
+  (-webkit-text-stroke: 1px var(--text-stroke-color)) {
   .card-article__image__watermark {
     text-shadow: none;
     text-stroke: 1px var(--text-stroke-color);
@@ -258,7 +259,6 @@ margin-block-start: 9px;
 
 .button:hover::before {
   transform: scaleX(1);
- 
 }
 
 .button:focus {
@@ -313,9 +313,7 @@ margin-block-start: 9px;
 
 /* styles for button's  */
 
-
-
-.like-icon{
+.like-icon {
   inline-size: 39px;
   block-size: 36px;
 }
@@ -386,7 +384,6 @@ margin-block-start: 9px;
 }
 
 .dialog {
- 
   /*gap: 30px;*/
   border: 2px solid var(--accent-color);
   padding: 30px;
@@ -398,16 +395,13 @@ margin-block-start: 9px;
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-
-
 .dialog[open] .dialog-text {
- position: relative;
+  position: relative;
   display: grid;
   grid-template-columns: 40px min(250px);
   align-items: center;
- gap: 20px;
- margin-block-end: 20px;
- 
+  gap: 20px;
+  margin-block-end: 20px;
 }
 
 .dialog[open] .floppy-icon {
@@ -424,9 +418,7 @@ margin-block-start: 9px;
   border: 2px solid var(--accent-color);
   block-size: 38px;
   inline-size: clamp(16.0625rem, 15.2702rem + 3.3803vw, 18.3125rem);
-  
 }
-
 
 @supports (font-variation-settings: "wght" var(--font-general-wg)) {
   .page {
@@ -436,8 +428,6 @@ margin-block-start: 9px;
     font-variation-settings: "wght" var(--font-accent-wg);
   }
 }
-
-
 
 @media (width <= 375px) {
   .page,
@@ -449,14 +439,11 @@ margin-block-start: 9px;
     --block-inline-size: minmax(2.5rem, 3.125rem);
     --article-block-size: 718px;
     --header-min-block-size: 327px;
-}
-  
+  }
 
-
-.header {
-  padding-block-start: 120px;
-}
-
+  .header {
+    padding-block-start: 120px;
+  }
 
   .group-head-name {
     font-size: clamp(2.5rem, 0.156rem + 12.5vw, 3.125rem);
@@ -467,17 +454,15 @@ margin-block-start: 9px;
     block-size: 28px;
   }
 
-.main {
- 
-  row-gap: 50px;
-}
+  .main {
+    row-gap: 50px;
+  }
 
-.theme-menu__list {
-  gap: 10px;
-}
+  .theme-menu__list {
+    gap: 10px;
+  }
 
-.card-article__description {
-  gap: 26px;
-}
-
+  .card-article__description {
+    gap: 26px;
+  }
 }

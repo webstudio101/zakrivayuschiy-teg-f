@@ -71,14 +71,12 @@
 
 /* click to heart icon */
 
-.contour {
-  transition: fill 0.1s linear;
-}
 
 .like-icon .contour {
   transition-property: fill;
   transition-timing-function: linear;
   transition-duration: 100ms;
+  transition: fill 0.1s linear;
 }
 
 .like-icon:active .core {
@@ -93,12 +91,12 @@
 
 .like-icon.is-liked .core {
   fill: var(--general-fill);
-  transition-delay: 50ms;
+  transition-delay: 0ms;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--general-fill);
-  transition-delay: 300ms;
+  transition-delay: 50ms;
 }
 
 .like-icon.is-liked .contour {

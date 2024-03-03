@@ -4,5 +4,14 @@
   --font-accent: "Press Start 2P", fantasy;
   --block-inline-size: clamp(19.375rem, 12.411rem + 34.821vw, 43.75rem);
   --article-block-size: 959px;
-  --header-min-block-size: 368px ;
+  --header-min-block-size: 368px;
+  --fill: none;
+}
+
+@media (width <= 375px) {
+  :root {
+    --block-inline-size: minmax(2.5rem, 3.125rem);
+    --article-block-size: 718px;
+    --header-min-block-size: 327px;
+  }
 }
