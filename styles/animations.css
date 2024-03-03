@@ -12,3 +12,128 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+
+/* transition-timing-function: ease; - default
+  transition-timing-function: ease-in;
+  transition-timing-function: ease-out;
+  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
+  transition-timing-function: step-start;
+  transition-timing-function: step-end; 
+   */
+
+
+
+/* header menu animation */   
+
+@keyframes triangle-movie {
+  0% {
+   translate:0;
+  }
+  100% {
+    translate: 4px;
+  }
+}
+
+
+
+
+/* hover to heart icon */
+
+.heart .core {	
+	transition-property: fill;
+  transition-timing-function: linear;
+  transition-duration: 300ms;
+  transition-delay: 300ms;
+}
+
+
+.heart .main-body {
+  transition-property: fill;
+  transition-timing-function: linear;
+  transition-duration: 300ms;
+  transition-delay: 0;
+}
+
+
+.heart:hover .core {
+  fill: var(--cr-color);
+  transition-delay: 0;
+}
+
+
+.heart:hover .main-body {
+  fill: var(--cr-color);
+  transition-delay: 50ms;
+}
+
+
+
+/* click to heart icon */
+
+.like-icon .contour {
+  transition-property: fill;
+  transition-timing-function: linear;
+  transition-duration: 100ms;
+}
+
+.like-icon:active .core {
+  fill: var(--general-fill);
+}
+
+.like-icon:active .main-body {
+  fill: var(--general-fill);
+}
+
+.like-icon.is-liked .core {
+  fill: var(--general-fill);
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--general-fill);
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--general-fill);
+  transition-property: fill;
+  transition-timing-function: linear;
+  transition-duration: 300ms;
+  transition-delay: 60ms;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heart 300ms ease-in alternate;
+  animation-delay: 100ms;
+}
+
+
+@keyframes heart  {
+  from {
+    transform: scale(1);
+  }
+  
+  to {
+    transform: scale(1.5);
+  }
+}
+
+
+
+.like-icon.is-liked .sparks {
+  animation: sparks 300ms ease-in alternate;
+  animation-delay: 300ms;
+}
+
+@keyframes sparks {
+  from {
+    fill: none;
+  }
+  to {
+    fill: var(--general-fill);
+  }
+}
+
+
+
+

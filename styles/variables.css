@@ -1,1 +1,8 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-general: Inter, Arial, Helvetica, sans-serif;
+  --font-accent: "Press Start 2P", fantasy;
+  --block-inline-size: clamp(19.375rem, 12.411rem + 34.821vw, 43.75rem);
+  --article-block-size: 959px;
+  --header-min-block-size: 368px ;
+}
