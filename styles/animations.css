@@ -65,7 +65,6 @@
   transition-property: fill;
   transition-timing-function: linear;
   transition-duration: 100ms;
-  transition: fill 0.1s linear;
 }
 
 .like-icon:active .core {
